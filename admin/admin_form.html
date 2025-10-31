@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi | FooDucation</title>
+    <link rel="stylesheet" href="../css/Adminform.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">FooDucation</h2>
+        <nav>
+            <ul>
+                <li class="menu-section">MAIN MENU</li>
+                <li><a href="dashboard_admin.html"><i class='bx bxs-home-alt-2'></i>Dashboard</a></li>
+
+                <li class="menu-section">PROJECT AND DATA</li>
+                <li><a href="admin_berita.html"><i class='bx bxs-book-open'></i>Berita</a></li>
+                <li><a href="admin_pangan.html"><i class='bx bxs-baguette'></i>Pangan</a></li>
+
+                <li class="menu-section">USERS ACTIVITY</li>
+                <li class="active"><a href="admin_form.html" class="active"><i class='bx bxs-message-dots'></i>Form Diskusi</a></li>
+                <li><a href="admin_users.html"><i class='bx bxs-user-circle'></i>Users</a></li>
+
+                <li class="menu-section">FEEDBACK</li>
+                <li><a href="admin_feedback.html"><i class='bx bx-mail-send'></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar-minimal"> 
+            <button class="user-icon"><i class='bx bxs-user-circle'></i></button>
+        </header>
+
+        <section class="project-section">
+            <h1>FORUM DISKUSI</h1>
+
+            <div class="diskusi-content-box">
+                <div class="diskusi-controls">
+                    <input type="text" id="diskusiSearchInput" placeholder="Cari Judul Diskusi..." class="diskusi-search-input">
+                    <button class="add-diskusi-btn" data-modal-target="#modal-tambah-diskusi">
+                        <i class='bx bx-plus'></i> Tambah Diskusi
+                    </button>
+                </div>
+
+                <div class="category">
+                    <div class="diskusi-list-container"> 
+                        
+                        <p id="noResultsDiskusi" style="display: none; text-align: center; color: #cc0000; font-weight: 600; padding: 20px 0;">
+                            ❌ Tidak ada diskusi yang cocok dengan pencarian Anda.
+                        </p>
+                        
+                        <a href="admin_chat.html" class="diskusi-item">
+                            <div class="diskusi-info">
+                                <h3 class="diskusi-title">Pentingnya Protein Nabati dalam Diet Harian</h3>
+                                <p class="diskusi-meta">Oleh: **Admin** | 17 Okt 2025 | <span>12 Komentar</span></p>
+                                <p class="diskusi-excerpt">Apakah ada pengalaman atau sumber yang kredibel mengenai efektivitas...</p>
+                            </div>
+                            <div class="diskusi-actions">
+                                <button class="edit-btn" data-modal-target="#modal-edit-diskusi" onclick="event.preventDefault()">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus" onclick="event.preventDefault()">Hapus</button>
+                            </div>
+                        </a>
+
+                        <a href="admin_chat.html" class="diskusi-item">
+                            <div class="diskusi-info">
+                                <h3 class="diskusi-title">Tren Pangan Organik: Manfaat vs Biaya</h3>
+                                <p class="diskusi-meta">Oleh: User 123 | 16 Okt 2025 | <span>5 Komentar</span></p>
+                                <p class="diskusi-excerpt">Mari diskusikan seberapa besar pengaruh sertifikasi organik terhadap...</p>
+                            </div>
+                            <div class="diskusi-actions">
+                                <button class="edit-btn" data-modal-target="#modal-edit-diskusi" onclick="event.preventDefault()">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus" onclick="event.preventDefault()">Hapus</button>
+                            </div>
+                        </a>
+                        
+                        <a href="admin_chat.html" class="diskusi-item">
+                            <div class="diskusi-info">
+                                <h3 class="diskusi-title">Pengaruh Gula pada Kesehatan Jangka Panjang</h3>
+                                <p class="diskusi-meta">Oleh: User 456 | 15 Okt 2025 | <span>20 Komentar</span></p>
+                                <p class="diskusi-excerpt">Bagaimana cara terbaik untuk mengurangi konsumsi gula tanpa mengurangi...</p>
+                            </div>
+                            <div class="diskusi-actions">
+                                <button class="edit-btn" data-modal-target="#modal-edit-diskusi" onclick="event.preventDefault()">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus" onclick="event.preventDefault()">Hapus</button>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </main>
+    
+    <div class="modal" id="modal-tambah-diskusi">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Buat Diskusi Baru</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="input-group">
+                    <label for="diskusi-judul">Judul Diskusi</label>
+                    <input type="text" id="diskusi-judul" placeholder="Contoh: Manfaat Tahu dan Tempe" required>
+                </div>
+                <div class="input-group">
+                    <label for="diskusi-deskripsi">Deskripsi/Isi Diskusi</label>
+                    <textarea id="diskusi-deskripsi" rows="6" placeholder="Jelaskan topik diskusi Anda secara rinci..." required></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Buat Diskusi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal-edit-diskusi">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Diskusi</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="input-group">
+                    <label for="diskusi-judul-edit">Judul Diskusi</label>
+                    <input type="text" id="diskusi-judul-edit" value="Pentingnya Protein Nabati dalam Diet Harian" required>
+                </div>
+                <div class="input-group">
+                    <label for="diskusi-deskripsi-edit">Deskripsi/Isi Diskusi</label>
+                    <textarea id="diskusi-deskripsi-edit" rows="6" required>Apakah ada pengalaman atau sumber yang kredibel mengenai efektivitas...</textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="modal modal-small" id="modal-konfirmasi-hapus">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Konfirmasi Hapus</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <p>Apakah Anda yakin ingin menghapus diskusi ini?</p>
+                <small style="color: red;">Tindakan ini tidak dapat dibatalkan.</small>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button class="cancel-btn" data-close-button>Batal</button>
+                <button class="delete-confirm-btn" type="button">Ya, Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div> 
+
+    <script src="../js/admin_form.js"></script> 
+</body>
+</html>

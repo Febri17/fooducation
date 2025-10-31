@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background: 
+    linear-gradient(120deg, #138132, #a3c7c5); 
+  background-size: 200% 100%; 
+  background-position: 100% 0; 
+  transition: background-position 1.2s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+body.login-mode {
+  background-position: 0 0; 
+}
+
+body.login-mode {
+  background: linear-gradient(120deg, #a3c7c5, #138132); 
+  background-position: 0 0;
+}
+
+.container {
+  position: relative;
+  width: 900px;
+  height: 550px;
+  background: #a3c7c5;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  overflow: hidden;
+}
+
+
+.image-side {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 1; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: transform 1.2s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.image-side.registration {
+    background-image: url('../image/bg.png'); 
+    right: 0; 
+    transform: translateX(0);
+}
+
+.image-side.login {
+    background-image: url('../image/bg.png'); 
+    right: -50%; 
+    transform: translateX(0);
+}
+
+.form-box {
+  position: absolute; 
+  top: 0;
+  width: 50%;
+  height: 100%;
+  
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+  background-color: #fff;
+  transition: left 1.2s cubic-bezier(0.86, 0, 0.07, 1); 
+  z-index: 2;
+}
+
+.form-box.registration {
+    left: 0; 
+}
+
+.form-box.login {
+    left: 100%; 
+}
+
+.container.flipped .image-side.registration {
+    transform: translateX(-100%); 
+}
+
+.container.flipped .image-side.login {
+    right: 0; 
+    transform: translateX(-100%); 
+}
+
+.container.flipped .form-box.registration {
+    left: -50%; 
+}
+
+.container.flipped .form-box.login {
+    left: 50%; 
+}
+
+.form-box h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: seagreen;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+.input-box input {
+  width: 100%;
+  padding: 13px 13px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f8f8f8;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: seagreen;
+  background: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 20px;
+}
+
+.forgot-link {
+  text-align: right;
+  margin: 5px 0 20px;
+}
+
+.forgot-link a {
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forgot-link a:hover {
+  color: seagreen;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: seagreen;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 128, 0, 0.3);
+  margin-top: 5px;
+}
+
+.btn:hover {
+  background: #4ba874;
+  transform: translateY(-2px);
+}
+
+form p {
+  text-align: center;
+  color: #333;
+  margin: 30px 0 15px;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid seagreen;
+  border-radius: 50%;
+  color: seagreen;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: seagreen;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.switch-text {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 20px;
+}
+.switch-text a {
+    color: seagreen;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 820px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    max-width: 450px;
+    perspective: none; 
+    transform: none !important; 
+    overflow: visible; 
+  }
+
+  .image-side {
+    display: none !important;
+    transform: none !important;
+  }
+
+  .form-box {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 40px 25px;
+    transform: none !important;
+    transition: none; 
+    left: auto !important; 
+  }
+  
+  .form-box.login {
+    display: none;
+  }
+  .container.flipped .form-box.registration {
+    display: none;
+  }
+  .container.flipped .form-box.login {
+    display: flex;
+  }
+}

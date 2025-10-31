@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Terkini Pangan & Gizi</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css2/Userberita.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="../index.html" class="logo" id="logo">FooDucation</a>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="sidebar" id="sidebar">
+                    <li><a href="pangan.html">Pangan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kalkulator2.html">IMT</a></li>
+                            <li><a href="kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="form.html">Diskusi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav-links">
+                    <li><a href="pangan.html">Pangan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kalkulator2.html">IMT</a></li>
+                            <li><a href="kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="form.html">Diskusi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <a href="profil.html"><i class='bx bxs-user-circle'></i></a>
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                <span class="material-symbols-outlined" id="close-icon" style="display: none;">close</span> 
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h1 class="page-title">BERITA</h1>
+            <div class="search-container">
+                <input type="text" id="beritaSearchInput" placeholder="Cari Judul Berita..." class="search-input">
+                <i class='bx bx-search search-icon'></i>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="cards-container">
+                
+                <p id="noResultsBerita" style="display: none; text-align: center; color: #888; font-weight: 500; width: 100%; margin-top: 20px;">
+                    Tidak ada berita yang cocok dengan pencarian.
+                </p>
+
+                <div class="card">
+                    <img src="https://placehold.co/600x400/38761d/ffffff?text=Fokus+Ketahanan" alt="Berita 1">
+                    <h3 class="card-title-text">Pemerintah Dorong Ketahanan Pangan Lokal</h3>
+                    <p>Program baru fokus pada peningkatan produksi komoditas pangan pokok di tingkat daerah...</p>
+                    <button class="detail-btn"
+                        data-title="Pemerintah Dorong Ketahanan Pangan Lokal Melalui Inovasi Daerah"
+                        data-img="https://placehold.co/600x400/38761d/ffffff?text=Fokus+Ketahanan"
+                        data-desc="Dalam upaya mengatasi tantangan global, pemerintah meluncurkan inisiatif 'Swasembada Lokal'. Program ini bertujuan memberdayakan petani kecil dengan menyediakan akses ke teknologi pertanian modern, bibit unggul, serta fasilitas penyimpanan pasca-panen. Fokus utama adalah pada beras, jagung, dan kedelai. Target jangka pendek adalah mengurangi impor sebesar 20% dalam dua tahun ke depan, sambil memastikan distribusi yang adil."
+                        data-video="https://www.youtube.com/embed/8Kq_J46w8t8" id="news-btn-1">
+                        Baca Selengkapnya
+                    </button>
+                </div>
+
+                <div class="card">
+                    <img src="https://placehold.co/600x400/003d6d/ffffff?text=Gizi+Anak" alt="Berita 2">
+                    <h3 class="card-title-text">Tingkat Gizi Buruk Anak Menurun Drastis</h3>
+                    <p>Kampanye gizi seimbang yang masif di desa-desa menunjukkan hasil positif dalam...</p>
+                    <button class="detail-btn" data-title="Kampanye Masif Berhasil Turunkan Tingkat Gizi Buruk Anak"
+                        data-img="https://placehold.co/600x400/003d6d/ffffff?text=Gizi+Anak"
+                        data-desc="Laporan terbaru dari Kementerian Kesehatan menunjukkan bahwa angka stunting dan gizi buruk pada balita telah menurun signifikan sebesar 5% dalam setahun terakhir. Keberhasilan ini dikreditkan pada program intervensi spesifik, seperti pemberian makanan tambahan berbasis protein dan edukasi gizi bagi ibu hamil dan menyusui. Kolaborasi antara Posyandu dan Puskesmas menjadi kunci utama di balik pencapaian ini."
+                        data-video="" id="news-btn-2">
+                        Baca Selengkapnya
+                    </button>
+                </div>
+
+                <div class="card">
+                    <img src="https://placehold.co/600x400/f39c12/ffffff?text=Inovasi+Makanan" alt="Berita 3">
+                    <h3 class="card-title-text">Inovasi Pangan Fungsional dari Limbah Sawit</h3>
+                    <p>Penelitian universitas menemukan cara mengolah sisa limbah sawit menjadi bahan pangan tinggi
+                        serat...</p>
+                    <button class="detail-btn"
+                        data-title="Penemuan Baru: Pangan Fungsional Berbasis Limbah Kelapa Sawit"
+                        data-img="https://placehold.co/600x400/f39c12/ffffff?text=Inovasi+Makanan"
+                        data-desc="Sekelompok ilmuwan pangan di Universitas Nusantara berhasil mengembangkan produk bubuk fortifikasi dari ampas kelapa sawit yang biasanya terbuang. Produk ini diklaim memiliki kandungan serat pangan yang sangat tinggi dan mineral penting, menjadikannya bahan baku ideal untuk makanan fungsional seperti sereal dan biskuit. Inovasi ini tidak hanya menyelesaikan masalah limbah tetapi juga membuka peluang ekonomi baru."
+                        data-video="https://www.youtube.com/embed/4bVf-8l3-R4" id="news-btn-3">
+                        Baca Selengkapnya
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-panel" id="modal-content-details">
+                <span class="close" id="close-modal">&times;</span>
+                <div class="modal-detail-content" style="text-align: left;">
+                    <img id="modal-img" src="" alt="Gambar Berita"
+                        style="width: 100%; height: auto; max-height: 250px; object-fit: cover;">
+                    <h2 style="color: #2c3e50; margin: 15px 0;" id="data-title-pangan"></h2>
+                    <button class="action-btn" id="show-video-btn" style="width: 100%;">
+                        <i class='bx bx-play-circle'></i> Tonton Video Liputan
+                    </button>
+                    <div class="modal-desc-full" style="margin-top: 20px;">
+                        <h4 style="border-bottom: 2px solid seagreen; padding-bottom: 5px; color: seagreen;">Isi Berita
+                            Lengkap</h4>
+                        <p id="data-desc-pangan"
+                            style="font-size: 16px; line-height: 1.7; color: #333; margin-top: 10px; text-align: justify;">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-panel" id="modal-content-video">
+                <button class="action-btn back-btn" id="back-to-details-btn">
+                    <i class='bx bx-arrow-back'></i> Kembali
+                </button>
+                <span class="close" id="close-modal-video" style="display: none;">&times;</span>
+                <h3 class="video-title" style="margin-top: 0;">Video Terkait: <span id="video-of-title"></span></h3>
+                <div class="video-container">
+                    <iframe id="youtube-frame" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen data-video-url=""></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Pangan & Gizi Digital. Semua Hak Dilindungi.
+    </footer>
+    <script src="../js2/berita.js"></script>
+
+</body>
+
+</html>

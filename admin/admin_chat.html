@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Diskusi | Protein Nabati</title>
+    <link rel="stylesheet" href="../css/Adminchat.css"> 
+    <link rel="stylesheet" href="../css/Diskusi_Chat.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">FooDucation</h2>
+        <nav>
+            <ul>
+                <li class="menu-section">MAIN MENU</li>
+                <li><a href="dashboard_admin.html"><i class='bx bxs-home-alt-2'></i>Dashboard</a></li>
+
+                <li class="menu-section">PROJECT AND DATA</li>
+                <li><a href="admin_berita.html"><i class='bx bxs-book-open'></i>Berita</a></li>
+                <li><a href="admin_pangan.html"><i class='bx bxs-baguette'></i>Pangan</a></li>
+
+                <li class="menu-section">USERS ACTIVITY</li>
+                <li><a href="admin_form.html" class="active"><i class='bx bxs-message-dots'></i>Form Diskusi</a></li> 
+                <li><a href="admin_users.html"><i class='bx bxs-user-circle'></i>Users</a></li>
+
+                <li class="menu-section">FEEDBACK</li>
+                <li><a href="admin_feedback.html"><i class='bx bx-mail-send'></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar-minimal"> 
+            <button class="user-icon"><i class='bx bxs-user-circle'></i></button>
+        </header>
+
+        <section class="chat-section">
+            
+            <div class="chat-header">
+                <a href="admin_form.html" class="back-btn"><i class='bx bx-arrow-back'></i></a>
+                <h1 class="chat-topic">Pentingnya Protein Nabati dalam Diet Harian</h1>
+            </div>
+
+            <div class="chat-box" id="chat-box">
+                
+                <div class="message received">
+                    <div class="message-content">
+                        <span class="message-sender">User 112</span>
+                        <p>Selamat pagi, rekan-rekan. Saya ingin membuka diskusi tentang sumber dan pentingnya protein nabati...</p>
+                        <span class="message-time">09:00</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>Menarik sekali! Apakah tahu dan tempe termasuk yang paling efektif?</p>
+                        <span class="message-time">09:05</span>
+                    </div>
+                </div>
+                
+                <div class="message received">
+                    <div class="message-content">
+                        <span class="message-sender">User 123</span>
+                        <p>Betul, tempe adalah sumber protein nabati yang sangat padat dan mudah dicerna.</p>
+                        <span class="message-time">09:15</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Ketik pesan Anda..." class="message-input">
+                <button class="send-btn"><i class='bx bxs-send'></i></button>
+            </div>
+
+        </section>
+    </main>
+    
+    <div id="overlay"></div> 
+
+    <script src="../js/admin_form.js"></script> 
+</body>
+</html>

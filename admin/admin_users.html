@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Pengguna | FooDucation</title>
+    <link rel="stylesheet" href="../css/adminusers.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">FooDucation</h2>
+        <nav>
+            <ul>
+                <li class="menu-section">MAIN MENU</li>
+                <li><a href="dashboard_admin.html"><i class='bx bxs-home-alt-2'></i>Dashboard</a></li>
+                <li class="menu-section">PROJECT AND DATA</li>
+                <li><a href="admin_berita.html"><i class='bx bxs-book-open'></i>Berita</a></li>
+                <li><a href="admin_pangan.html"><i class='bx bxs-baguette'></i>Pangan</a></li>
+                <li class="menu-section">USERS ACTIVITY</li>
+                <li><a href="admin_form.html"><i class='bx bxs-message-dots'></i>Form Diskusi</a></li>
+                <li class="active"><a href="admin_users.html" class="active"><i class='bx bxs-user-circle'></i>Users</a>
+                </li>
+                <li class="menu-section">FEEDBACK</li>
+                <li><a href="admin_feedback.html"><i class='bx bx-mail-send'></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar-minimal">
+            <button class="user-icon"><i class='bx bxs-user-circle'></i></button>
+        </header>
+
+        <section class="project-section">
+            <h1>MANAJEMEN PENGGUNA</h1>
+
+            <div class="user-controls">
+                <input type="text" id="userSearchInput" class="user-search-input"
+                    placeholder="Cari pengguna berdasarkan nama atau email...">
+            </div>
+
+            <div class="user-list-container">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <tr>
+                            <td data-label="No">1</td>
+                            <td data-label="Username">AdminFoo</td>
+                            <td data-label="Email">admin@fooducation.com</td>
+                            <td data-label="Status"><span class="status-badge admin">Admin</span></td>
+                            <td data-label="Aksi">
+                                <button class="reset-btn">Reset</button>
+                                <button class="edit-btn" data-modal-target="#modal-edit-user">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">2</td>
+                            <td data-label="Username">user_123</td>
+                            <td data-label="Email">user123@email.com</td>
+                            <td data-label="Status"><span class="status-badge active">Aktif</span></td>
+                            <td data-label="Aksi">
+                                <button class="reset-btn">Reset</button>
+                                <button class="edit-btn" data-modal-target="#modal-edit-user">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">3</td>
+                            <td data-label="Username">jane_doe</td>
+                            <td data-label="Email">jane@contoh.com</td>
+                            <td data-label="Status"><span class="status-badge inactive">Non-Aktif</span></td>
+                            <td data-label="Aksi">
+                                <button class="reset-btn">Reset</button>
+                                <button class="edit-btn" data-modal-target="#modal-edit-user">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">4</td>
+                            <td data-label="Username">lisa_food</td>
+                            <td data-label="Email">lisa@food.com</td>
+                            <td data-label="Status"><span class="status-badge active">Aktif</span></td>
+                            <td data-label="Aksi">
+                                <button class="reset-btn">Reset</button>
+                                <button class="edit-btn" data-modal-target="#modal-edit-user">Edit</button>
+                                <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-edit-user">
+        <div classs="modal-content">
+            <div class="modal-header">
+                <h2>Edit Pengguna</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+
+            <form class="modal-body">
+                <div class="input-group">
+                    <label for="edit-username">Username</label>
+                    <input type="text" id="edit-username" value="user_123" required>
+                </div>
+                <div class="input-group">
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" value="user123@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="edit-status">Status</label>
+                    <select id="edit-status" required>
+                        <option value="active">Aktif</option>
+                        <option value="inactive">Non-Aktif</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <small style="color: red; display: block; margin-top: 10px;">Kosongkan password jika tidak ingin
+                    diubah.</small>
+
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal modal-small" id="modal-konfirmasi-hapus">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Konfirmasi Hapus</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="../js/admin_list.js"></script>
+</body>
+
+</html>

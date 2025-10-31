@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Pengguna | FooDucation</title>
+    <link rel="stylesheet" href="../css/feedback.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">FooDucation</h2>
+        <nav>
+            <ul>
+                <li class="menu-section">MAIN MENU</li>
+                <li><a href="dashboard_admin.html"><i class='bx bxs-home-alt-2'></i>Dashboard</a></li>
+
+                <li class="menu-section">PROJECT AND DATA</li>
+                <li><a href="admin_berita.html"><i class='bx bxs-book-open'></i>Berita</a></li>
+                <li><a href="admin_pangan.html"><i class='bx bxs-baguette'></i>Pangan</a></li>
+
+                <li class="menu-section">USERS ACTIVITY</li>
+                <li><a href="admin_form.html"><i class='bx bxs-message-dots'></i>Form Diskusi</a></li>
+                <li><a href="admin_users.html"><i class='bx bxs-message-dots'></i>Users</a></li>
+
+
+                <li class="menu-section">FEEDBACK</li>
+                <li class="active"><a href="admin_feedback.html" class="active"><i
+                            class='bx bxs-user-circle'></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar-minimal">
+            <button class="user-icon"><i class='bx bxs-user-circle'></i></button>
+        </header>
+
+        <section class="project-section">
+            <h1>PESAN PENGGUNA (FEEDBACK)</h1>
+
+            <div class="user-list-container">
+
+                <div class="feedback-list" id="feedbackListBody">
+
+                    <div class="feedback-item" data-id="1" data-user="John Doe"
+                        data-message="Ini adalah isi pesan pengguna yang panjang. Mereka melaporkan adanya bug di halaman login."
+                        onclick="openFeedbackModal(this)">
+
+                        <div class="user-info-feedback">
+                            <div class="user-avatar">
+                                <i class="bx bxs-user-circle"></i>
+                            </div>
+                            <div class="message-details">
+                                <div class="username-feedback">John Doe</div>
+                                <div class="message-summary">Ini adalah isi pesan pengguna yang panjang. Mereka
+                                    melaporkan adanya bug di...</div>
+                            </div>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <button class="delete-message-btn"
+                                onclick="event.stopPropagation(); openDeleteConfirmModal(1, 'feedback')">
+                                <i class="bx bx-trash"></i> Hapus
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="feedback-item" data-id="2" data-user="Jane Smith"
+                        data-message="Apakah mungkin untuk menambahkan fitur notifikasi email ketika ada pembaruan di proyek yang saya ikuti? Akan sangat membantu! Salam, Jane Smith."
+                        onclick="openFeedbackModal(this)">
+
+                        <div class="user-info-feedback">
+                            <div class="user-avatar">
+                                <i class="bx bxs-user-circle"></i>
+                            </div>
+                            <div class="message-details">
+                                <div class="username-feedback">Jane Smith</div>
+                                <div class="message-summary">Apakah mungkin untuk menambahkan fitur notifikasi email
+                                    ketika ada pembaruan di proyek yang saya ikuti?...</div>
+                            </div>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <button class="delete-message-btn"
+                                onclick="event.stopPropagation(); openDeleteConfirmModal(2, 'feedback')">
+                                <i class="bx bx-trash"></i> Hapus
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="feedback-item" data-id="3" data-user="Guest_101"
+                        data-message="Aplikasi ini sangat bagus! Desainnya bersih dan user-friendly. Terima kasih atas kerja keras tim!"
+                        onclick="openFeedbackModal(this)">
+
+                        <div class="user-info-feedback">
+                            <div class="user-avatar">
+                                <i class="bx bx-mail-send"></i>
+                            </div>
+                            <div class="message-details">
+                                <div class="username-feedback">Guest_101</div>
+                                <div class="message-summary">Aplikasi ini sangat bagus! Desainnya bersih dan
+                                    user-friendly. Terima kasih atas kerja keras tim!</div>
+                            </div>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <button class="delete-message-btn"
+                                onclick="event.stopPropagation(); openDeleteConfirmModal(3, 'feedback')">
+                                <i class="bx bx-trash"></i> Hapus
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="feedbackModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalFeedbackTitle">Detail Pesan Feedback</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+
+            <div class="modal-body modal-body-feedback">
+                <div class="feedback-detail-header">
+                    <h3>Dari: <span id="modalUsername"></span></h3>
+                </div>
+                <div class="feedback-detail-content">
+                    <p id="modalMessageContent">Pesan sedang dimuat...</p>
+                </div>
+            </div>
+
+            <div class="modal-footer" style="justify-content: space-between;">
+                <button class="delete-confirm-btn" id="modalDeleteButton" type="button">
+                    <i class='bx bx-trash'></i> Hapus Pesan
+                </button>
+                <button class="cancel-btn" data-close-button>Tutup</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-small" id="modal-konfirmasi-hapus">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Konfirmasi Hapus</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <p>Anda yakin ingin menghapus pengguna ini?</p>
+                <small style="color: red;">Tindakan ini tidak dapat dibatalkan.</small>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button class="cancel-btn" data-close-button>Batal</button>
+                <button class="delete-confirm-btn" type="button">Ya, Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="../js/feedback.js"></script>
+</body>
+
+</html>

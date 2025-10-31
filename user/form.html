@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css2/Userform.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="../index.html" class="logo" id="logo">FooDucation</a>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="sidebar" id="sidebar">
+                    <span class="material-symbols-outlined" id="close-icon"
+                        style="position: absolute; top: 15px; right: 20px; color: #333;">close</span>
+
+                    <li><a href="pangan.html">Pangan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kalkulator2.html">IMT</a></li>
+                            <li><a href="kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="form.html">Diskusi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav-links">
+                    <li><a href="pangan.html">Pangan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kalkulator2.html">IMT</a></li>
+                            <li><a href="kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="form.html">Diskusi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <a href="profil.html"><i class='bx bxs-user-circle'></i></a>
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="topbar-minimal">
+        </header>
+
+        <section class="project-section">
+            <h1>FORUM DISKUSI</h1>
+
+            <div class="diskusi-content-box">
+                <div class="diskusi-controls">
+                    <input type="text" id="diskusiSearchInput" placeholder="Cari Judul Diskusi..." class="diskusi-search-input">
+                    <button class="add-diskusi-btn" data-modal-target="#modal-tambah-diskusi">
+                        <i class='bx bx-plus'></i> Tambah Diskusi
+                    </button>
+                </div>
+
+                <div class="category">
+                    <div class="diskusi-list-container">
+                        <p id="noResultsForm" style="display: none; text-align: center; color: #888; font-weight: 500; width: 100%; margin-top: 20px;">
+                            Tidak ada diskusi yang cocok dengan pencarian.
+                        </p>
+
+                        <div class="diskusi-item" id="diskusi-1">
+                            <a href="chat.html" class="diskusi-link">
+                                <div class="diskusi-info">
+                                    <h3 class="diskusi-title">Pentingnya Protein Nabati dalam Diet Harian</h3>
+                                    <p class="diskusi-meta">Oleh: **Admin** | 17 Okt 2025 | <span class="komentar-count">12 Komentar</span></p>
+                                    <p class="diskusi-excerpt">Apakah ada pengalaman atau sumber yang kredibel mengenai
+                                        efektivitas...</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="diskusi-item" id="diskusi-2">
+                            <a href="diskusi_detail.html?id=2" class="diskusi-link">
+                                <div class="diskusi-info">
+                                    <h3 class="diskusi-title">Tren Pangan Organik: Manfaat vs Biaya</h3>
+                                    <p class="diskusi-meta">Oleh: User 123 | 16 Okt 2025 | <span class="komentar-count">5 Komentar</span></p>
+                                    <p class="diskusi-excerpt">Mari diskusikan seberapa besar pengaruh sertifikasi organik
+                                        terhadap...</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="diskusi-item" id="diskusi-3">
+                            <a href="diskusi_detail.html?id=3" class="diskusi-link">
+                                <div class="diskusi-info">
+                                    <h3 class="diskusi-title">Tips Menghitung Kalori Makanan Rumahan yang Akurat</h3>
+                                    <p class="diskusi-meta">Oleh: Budi Sehat | 15 Okt 2025 | <span class="komentar-count">3 Komentar</span></p>
+                                    <p class="diskusi-excerpt">Sulit menentukan jumlah kalori masakan ibu. Ada yang punya
+                                        tips?</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-tambah-diskusi">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Buat Diskusi Baru</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <form id="form-tambah-diskusi" class="modal-body">
+                <div class="input-group">
+                    <label for="diskusi-judul">Judul Diskusi</label>
+                    <input type="text" id="diskusi-judul" placeholder="Contoh: Manfaat Tahu dan Tempe" required>
+                </div>
+                <div class="input-group">
+                    <label for="diskusi-deskripsi">Deskripsi/Isi Diskusi</label>
+                    <textarea id="diskusi-deskripsi" rows="6" placeholder="Jelaskan topik diskusi Anda secara rinci..."
+                        required></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Buat Diskusi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="../js2/form.js"></script>
+</body>
+
+</html>

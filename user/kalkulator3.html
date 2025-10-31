@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kebutuhan Kalori Harian</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css2/UserKalku3.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <a href="../index.html" class="logo" id="logo">FooDucation</a>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="sidebar" id="sidebar">
+                    <span class="material-symbols-outlined" id="close-icon"
+                        style="position: absolute; top: 15px; right: 20px; color: #333;">close</span>
+
+                    <li><a href="pangan.html">Pangan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kalkulator2.html">IMT</a></li>
+                            <li><a href="kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="form.html">Diskusi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav-links">
+                    <li><a href="pangan.html">Pangan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kalkulator2.html">IMT</a></li>
+                            <li><a href="kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="form.html">Diskusi</a></li>
+                            <li><a href="kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <a href="profil.html"><i class='bx bxs-user-circle'></i></a>
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="main-content">
+            <h2 class="section-title">Kalkulator Kebutuhan Kalori Harian</h2>
+
+            <div class="macro-wrapper">
+
+                <div id="macro-input-area" class="macro-area">
+                    <form id="macro-form">
+
+                        <div class="input-group">
+                            <label>Jenis Kelamin:</label>
+                            <div class="gender-selection">
+                                <button type="button" class="gender-btn" data-gender="pria">
+                                    <i class='bx bx-male'></i>
+                                    <span>Pria</span>
+                                </button>
+                                <button type="button" class="gender-btn" data-gender="wanita">
+                                    <i class='bx bx-female'></i>
+                                    <span>Wanita</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="gender" required>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="age">Usia (Tahun):</label>
+                                <input type="number" id="age" min="15" max="100" placeholder="Ex: 30" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="height">Tinggi Badan (cm):</label>
+                                <input type="number" id="height" min="50" max="300" placeholder="Ex: 170" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="weight">Berat Badan (kg):</label>
+                                <input type="number" id="weight" min="1" max="500" placeholder="Ex: 65.5" step="0.1"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="activity">Tingkat Aktivitas Fisik (Per Minggu):</label>
+                            <div class="activity-selection">
+                                <button type="button" class="activity-btn" data-activity="sedentary">
+                                    <i class='bx bxs-bed'></i>
+                                    <span>Hampir Tidak Aktif</span>
+                                </button>
+                                <button type="button" class="activity-btn" data-activity="light">
+                                    <i class='bx bx-walk'></i>
+                                    <span>Ringan (1-3x)</span>
+                                </button>
+                                <button type="button" class="activity-btn" data-activity="moderate">
+                                    <i class='bx bx-run'></i>
+                                    <span>Sedang (3-5x)</span>
+                                </button>
+                                <button type="button" class="activity-btn" data-activity="very_active">
+                                    <i class='bx bx-cycling'></i>
+                                    <span>Sangat Aktif (6-7x)</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="activity" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="goal">Tujuan Berat Badan:</label>
+                            <div class="goal-selection">
+                                <button type="button" class="goal-btn" data-goal="loss">
+                                    <i class='bx bxs-down-arrow'></i>
+                                    <span>Turun BB</span>
+                                </button>
+                                <button type="button" class="goal-btn" data-goal="maintain">
+                                    <i class='bx bx-minus'></i>
+                                    <span>Jaga Ideal</span>
+                                </button>
+                                <button type="button" class="goal-btn" data-goal="gain">
+                                    <i class='bx bxs-up-arrow'></i>
+                                    <span>Naik BB</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="goal" required>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="calculate-macro-btn">HITUNG KEBUTUHAN
+                            KALORI</button>
+                    </form>
+                </div>
+
+                <div id="macro-result-area" class="macro-area" style="display: none;">
+                    <h3>Kebutuhan Kalori Harian Anda</h3>
+
+                    <div class="result-box">
+                        <p class="result-label">Kalori yang Harus Dikonsumsi:</p>
+                        <h1 id="calorie-goal">0 kcal</h1>
+
+                        <p class="result-label" style="margin-top: 15px;">BMR (Kalori Dasar Tubuh):</p>
+                        <h2 id="bmr-value">0 kcal</h2>
+
+                        <p class="result-label" style="margin-top: 15px;">TDEE (Kalori dengan Aktivitas):</p>
+                        <h2 id="tdee-value">0 kcal</h2>
+                    </div>
+
+                    <p class="result-info" id="result-message">
+                    </p>
+
+                    <button id="reset-macro-btn" class="submit-button"
+                        style="background-color: #f44336; margin-top: 20px;">ULANGI</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="../js2/kalku3.js"></script>
+</body>
+
+</html>

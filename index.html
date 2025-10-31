@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FooDucation | Edukasi Pangan</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;700&display=swap" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="index.html" class="logo" id="logo">FooDucation</a>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="sidebar" id="sidebar">
+                    <li><a href="user/pangan.html">Pangan</a></li>
+                    <li><a href="user/berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user/kalkulator2.html">IMT</a></li>
+                            <li><a href="user/kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="user/kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user/form.html">Diskusi</a></li>
+                            <li><a href="user/kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav-links">
+                    <li><a href="user/pangan.html">Pangan</a></li>
+                    <li><a href="user/pangan.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Kalkulator</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user/kalkulator2.html">IMT</a></li>
+                            <li><a href="user/kalkulator3.html">Makronutrien</a></li>
+                            <li><a href="user/kalkulator1.html">Harian</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Kontak</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user/form.html">Diskusi</a></li>
+                            <li><a href="user/kontak.html">Kontak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <a href="user/profil.html"><i class='bx bxs-user-circle'></i></a>
+                <span class="material-symbols-outlined" id="menu-icon">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('image/3.png');"></div>
+            <div class="slide" style="background-image: url('image/1.png');"></div>
+            <div class="slide" style="background-image: url('image/2.png');"></div>
+            <div class="slide" style="background-image: url('image/3.png');"></div>
+            <div class="slide" style="background-image: url('image/4.png');">"></div>
+        </div>
+
+        <h1>Jelajahi Dunia Pangan Sehat <span id="typewriter-text"></span></h1>
+
+        <p>Website Edukasi Pangan Terkini | Pengetahuan yang Lezat</p>
+    </section>
+
+    <section class="content">
+        <div class="content-wrapper">
+            <div class="content-image">
+                <img src="image/about.png" alt="Tentang Website">
+            </div>
+
+            <div class="content-text">
+                <h1>Tentang Website Ini</h1>
+                <p>
+                    Ini adalah contoh halaman web sederhana yang memiliki struktur utama
+                    berupa Navbar di bagian atas, Hero Section dengan gambar latar, Isi
+                    sebagai konten utama, dan Footer di bagian bawah.
+                    Kamu bisa mengembangkan tampilan ini sesuai kebutuhanmu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <h2>Pangan</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="image/1.png" alt="Apel Merah">
+                <h3>Apel Merah</h3>
+                <p>Buah segar kaya serat dan vitamin C. Cocok untuk diet.</p>
+                <button class="detail-btn" data-title="Apel Merah" data-img="image/1.png" data-jenis="Buah"
+                    data-kalori="52 kkal/100g" data-mineral="Kalium, Fosfor" data-vitamin="Vitamin C, K"
+                    data-serat="2.4 g/100g" data-protein="0.3 g/100g"
+                    data-desc="Apel merah adalah sumber antioksidan yang baik, membantu meningkatkan kesehatan jantung dan pencernaan. Kulitnya mengandung serat tinggi."
+                    data-video="https://www.youtube.com/embed/gS_r5X78s7c?si=X-qj6g0J-WvR-b_s&autoplay=0">
+                    Detail
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h2>Berita Terbaru</h2>
+        <div class="news-card">
+            <img src="image/1.png" alt="Berita 1">
+            <div class="news-content">
+                <h3>Judul Berita 1: Manfaat Pangan Lokal</h3>
+                <p>Highlight singkat berita 1, menjelaskan inti dari isi berita secara ringkas dan menarik.</p>
+
+                <button class="read-btn" data-title="Judul Berita 1: Manfaat Pangan Lokal" data-img="image/1.png"
+                    data-desc="Ini adalah isi lengkap dari Berita 1. Pangan lokal memiliki dampak besar pada keberlanjutan lingkungan dan ekonomi masyarakat desa. Konsumsi pangan lokal juga menjamin asupan nutrisi yang lebih segar dan minim pengawet."
+                    data-video="https://www.youtube.com/embed/n4Kz0R-uSGY?si=X-qj6g0J-WvR-b_s&autoplay=0">
+                    Baca Selengkapnya
+                </button>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <img src="image/2.png" alt="Berita 2">
+            <div class="news-content">
+                <h3>Judul Berita 2: Tren Diet Berkelanjutan</h3>
+                <p>Highlight singkat berita 2, menjelaskan inti dari isi berita secara ringkas dan menarik.</p>
+
+                <button class="read-btn" data-title="Judul Berita 2: Tren Diet Berkelanjutan" data-img="image/2.png"
+                    data-desc="Diet berkelanjutan berfokus pada makanan yang diproduksi secara etis dan ramah lingkungan. Tren ini mengajak konsumen untuk mengurangi jejak karbon makanan mereka dan memilih sumber protein nabati."
+                    data-video="https://www.youtube.com/embed/n4Kz0R-uSGY?si=X-qj6g0J-WvR-b_s&autoplay=0">
+                    Baca Selengkapnya
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div id="modal-content-details" class="modal-panel">
+
+                <img id="modal-img" src="" alt="Gambar Konten">
+                <h3 id="modal-title"></h3> <button id="show-video-btn" class="action-btn">Lihat Video Terkait</button>
+
+                <p id="berita-desc-full"></p>
+
+                <div class="modal-body-split">
+
+                    <div class="modal-details gizi-kiri">
+                        <h3 id="data-title-pangan" class="pangan-title-split"></h3>
+
+                        <h4>Informasi Gizi</h4>
+                        <p><strong>Jenis:</strong> <span id="data-jenis"></span></p>
+                        <p><strong>Kalori:</strong> <span id="data-kalori"></span></p>
+                        <p><strong>Protein:</strong> <span id="data-protein"></span></p>
+                        <p><strong>Serat:</strong> <span id="data-serat"></span></p>
+                        <p><strong>Vitamin:</strong> <span id="data-vitamin"></span></p>
+                        <p><strong>Mineral:</strong> <span id="data-mineral"></span></p>
+                    </div>
+
+                    <div class="modal-details deskripsi-kanan">
+                        <h4>Deskripsi Pangan</h4>
+                        <p id="data-desc-pangan"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-content-video" class="modal-panel video-panel">
+                <button id="back-to-details-btn" class="action-btn back-btn"><i class='bx bx-arrow-back'></i>
+                    Kembali</button>
+
+                <h3 class="video-title">Video Terkait <span id="video-of-title"></span></h3>
+
+                <div class="video-container">
+                    <iframe id="youtube-frame" width="100%" height="315" src="" data-video-url="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <p class="video-caption">Tonton video terkait pangan ini untuk edukasi yang lebih mendalam.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+        &copy; 2025 FooDucation | Semua Hak Dilindungi
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

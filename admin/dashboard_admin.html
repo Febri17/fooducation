@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin | FooDucation</title>
+    <link rel="stylesheet" href="../css/dAdmin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">FooDucation</h2>
+        <nav>
+            <ul>
+                <li class="menu-section">MAIN MENU</li>
+                <li><a href="dashboard_admin.html" class="active"><i class='bx bxs-home-alt-2'></i>Dashboard</a></li>
+
+                <li class="menu-section">PROJECT AND DATA</li>
+                <li><a href="admin_berita.html"><i class='bx bxs-book-open'></i>Berita</a></li>
+                <li><a href="admin_pangan.html"><i class='bx bxs-baguette'></i>Pangan</a></li>
+
+                <li class="menu-section">USERS ACTIVITY</li>
+                <li><a href="admin_form.html"><i class='bx bxs-message-dots'></i>Form Diskusi</a></li>
+                <li><a href="admin_users.html"><i class='bx bxs-user-circle'></i>Users</a></li>
+
+                <li class="menu-section">FEEDBACK</li>
+                <li><a href="admin_feedback.html"><i class='bx bx-mail-send'></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <input type="text" placeholder="Search">
+            <button class="user-icon"><i class='bx bxs-user-circle'></i></button>
+        </header>
+
+        <section class="project-section">
+            <h1>PROJECT</h1>
+
+            <div class="category">
+                <h2>PANGAN</h2>
+                <div class="card-container">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="category-actions">
+                    <a href="admin_pangan.html" class="see-more" role="button">See More</a>
+                    <button class="add-btn" data-modal-target="#modal-pangan">Add +</button>
+                </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="category">
+                <h2>BERITA</h2>
+                <div class="card-container">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+                <div class="category-actions">
+                    <a href="admin_berita.html" class="see-more" role="button">See More</a>
+                    <button class="add-btn" data-modal-target="#modal-berita">Add +</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-pangan">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tambah Data Pangan</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="input-group">
+                    <label for="pangan-nama">Nama Pangan</label>
+                    <input type="text" id="pangan-nama" required>
+                </div>
+                <div class="input-group">
+                    <label for="pangan-jenis">Jenis Pangan</label>
+                    <input type="text" id="pangan-jenis">
+                </div>
+                <div class="input-group file-input">
+                    <label for="pangan-foto">Foto (Pilih File)</label>
+                    <input type="file" id="pangan-foto" accept="image/*" required>
+                </div>
+                <div class="input-group">
+                    <label for="pangan-video">Link Video YouTube</label>
+                    <input type="url" id="pangan-video" placeholder="Masukkan URL YouTube (Opsional)">
+                </div>
+                <div class="input-group">
+                    <label for="pangan-deskripsi">Deskripsi</label>
+                    <textarea id="pangan-deskripsi" rows="3"></textarea>
+                </div>
+                
+                <div class="nutrient-group">
+                    <div class="input-group">
+                        <label for="pangan-kalori">Kalori (kkal)</label>
+                        <input type="number" id="pangan-kalori">
+                    </div>
+                    <div class="input-group">
+                        <label for="pangan-serat">Serat (g)</label>
+                        <input type="number" id="pangan-serat">
+                    </div>
+                    <div class="input-group">
+                        <label for="pangan-protein">Protein (g)</label>
+                        <input type="number" id="pangan-protein">
+                    </div>
+                    <div class="input-group">
+                        <label for="pangan-vitamin">Vitamin</label>
+                        <input type="text" id="pangan-vitamin">
+                    </div>
+                    <div class="input-group">
+                        <label for="pangan-mineral">Mineral</label>
+                        <input type="text" id="pangan-mineral">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Simpan Data Pangan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="modal" id="modal-berita">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tambah Data Berita</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="input-group">
+                    <label for="berita-judul">Judul Berita</label>
+                    <input type="text" id="berita-judul" required>
+                </div>
+                <div class="input-group">
+                    <label for="berita-tanggal">Tanggal</label>
+                    <input type="date" id="berita-tanggal">
+                </div>
+                <div class="input-group file-input">
+                    <label for="berita-foto">Foto (Pilih File)</label>
+                    <input type="file" id="berita-foto" accept="image/*" required>
+                </div>
+                <div class="input-group">
+                     <label for="pangan-video">Link Video YouTube</label>
+                     <input type="url" id="pangan-video" placeholder="Masukkan URL YouTube (Opsional)">
+                 </div>
+                <div class="input-group">
+                    <label for="berita-deskripsi">Deskripsi Berita</label>
+                    <textarea id="berita-deskripsi" rows="5" required></textarea>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Simpan Data Berita</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="overlay"></div> 
+
+    <script src="../js/admin_dashboard.js"></script>
+</body>
+</html>

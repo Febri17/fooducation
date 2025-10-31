@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Berita | FooDucation</title>
+    <link rel="stylesheet" href="../css/AdminBerita.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">FooDucation</h2>
+        <nav>
+            <ul>
+                <li class="menu-section">MAIN MENU</li>
+                <li><a href="dashboard_admin.html"><i class='bx bxs-home-alt-2'></i>Dashboard</a></li>
+
+                <li class="menu-section">PROJECT AND DATA</li>
+                <li><a href="admin_berita.html" class="active"><i class='bx bxs-book-open'></i>Berita</a></li>
+                <li><a href="admin_pangan.html"><i class='bx bxs-baguette'></i>Pangan</a></li>
+
+                <li class="menu-section">USERS ACTIVITY</li>
+                <li><a href="admin_form.html"><i class='bx bxs-message-dots'></i>Form Diskusi</a></li>
+                <li><a href="admin_users.html"><i class='bx bxs-user-circle'></i>Users</a></li>
+
+                <li class="menu-section">FEEDBACK</li>
+                <li><a href="admin_feedback.html"><i class='bx bx-mail-send'></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <input type="text" id="beritaSearchInput" placeholder="Cari berita berdasarkan judul...">
+            <button class="user-icon"><i class='bx bxs-user-circle'></i></button>
+        </header>
+
+        <section class="project-section">
+            <h1>LIST BERITA</h1>
+
+            <div class="category">
+                <h2>BERITA TERBARU</h2>
+                
+                <div class="card-container">
+                    <p id="noResultsBerita" style="display: none; text-align: center; color: #666; margin-top: 20px; width: 100%;">
+                        Tidak ada berita yang cocok dengan pencarian.
+                    </p>
+                    
+                    <div class="card card-with-actions">
+                        <div class="card-info">
+                            <p class="berita-judul" style="font-size: 0.9rem; margin-bottom: 5px;">**Pentingnya Diversifikasi Pangan Lokal**</p>
+                            <small class="berita-tanggal" style="color: #666;">20 Oktober 2025</small>
+                        </div>
+                        <div class="card-actions-list">
+                            <button class="edit-btn" data-modal-target="#modal-edit-berita">Edit</button>
+                            <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-with-actions">
+                        <div class="card-info">
+                            <p class="berita-judul" style="font-size: 0.9rem; margin-bottom: 5px;">**Strategi Pemerintah Menjaga Ketahanan Pangan**</p>
+                            <small class="berita-tanggal" style="color: #666;">18 Oktober 2025</small>
+                        </div>
+                        <div class="card-actions-list">
+                            <button class="edit-btn" data-modal-target="#modal-edit-berita">Edit</button>
+                            <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-with-actions">
+                        <div class="card-info">
+                            <p class="berita-judul" style="font-size: 0.9rem; margin-bottom: 5px;">**Isu Keamanan Makanan Kemasan di Indonesia**</p>
+                            <small class="berita-tanggal" style="color: #666;">17 Oktober 2025</small>
+                        </div>
+                        <div class="card-actions-list">
+                            <button class="edit-btn" data-modal-target="#modal-edit-berita">Edit</button>
+                            <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-with-actions">
+                        <div class="card-info">
+                            <p class="berita-judul" style="font-size: 0.9rem; margin-bottom: 5px;">**Tips Bertani Organik untuk Skala Rumah Tangga**</p>
+                            <small class="berita-tanggal" style="color: #666;">16 Oktober 2025</small>
+                        </div>
+                        <div class="card-actions-list">
+                            <button class="edit-btn" data-modal-target="#modal-edit-berita">Edit</button>
+                            <button class="delete-btn" data-modal-target="#modal-konfirmasi-hapus">Hapus</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="section-divider"></div>
+            
+        </section>
+    </main>
+
+    <div class="modal" id="modal-edit-berita">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Data Berita</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <form class="modal-body">
+                <div class="input-group">
+                    <label for="berita-judul-edit">Judul Berita</label>
+                    <input type="text" id="berita-judul-edit" value="Judul Berita Saat Ini" required>
+                </div>
+                <div class="input-group">
+                    <label for="berita-tanggal-edit">Tanggal</label>
+                    <input type="date" id="berita-tanggal-edit" value="2025-10-20">
+                </div>
+                <div class="input-group file-input">
+                    <label for="berita-foto-edit">Foto (Biarkan kosong jika tidak ingin mengubah)</label>
+                    <input type="file" id="berita-foto-edit" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label for="pangan-video">Link Video YouTube</label>
+                    <input type="url" id="pangan-video" placeholder="Masukkan URL YouTube (Opsional)">
+                </div>
+                <div class="input-group">
+                    <label for="berita-deskripsi-edit">Isi Berita</label>
+                    <textarea id="berita-deskripsi-edit" rows="8" required>Isi berita yang panjang dan detail...</textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="submit-btn">Simpan Perubahan Berita</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal modal-small" id="modal-konfirmasi-hapus">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Konfirmasi Hapus</h2>
+                <button class="close-btn" data-close-button>&times;</button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <p>Apakah Anda yakin ingin menghapus data berita <b>"Judul Berita"</b> ini?</p>
+                <small style="color: red;">Tindakan ini tidak dapat dibatalkan.</small>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button class="cancel-btn" data-close-button>Batal</button>
+                <button class="delete-confirm-btn" type="button">Ya, Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div> 
+
+    <script src="../js/admin_berita.js"></script> 
+</body>
+</html>
