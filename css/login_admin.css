@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #a3c7c5, #138132);
+}
+
+.login-container {
+    position: relative;
+    width: 900px;
+    height: 550px;
+    background: #a3c7c5;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    overflow: hidden;
+}
+
+.image-side {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 0;
+    background-image: url('../image/bg.png');
+}
+
+.form-box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.form-box h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: seagreen;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 13px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f8f8f8;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: seagreen;
+    background: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.forgot-link {
+    text-align: right;
+    margin: 5px 0 20px;
+}
+
+.forgot-link a {
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+
+.forgot-link a:hover {
+    color: seagreen;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: seagreen;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 128, 0, 0.3);
+    margin-top: 5px;
+}
+
+.btn:hover {
+    background: #4ba874;
+    transform: translate(-2px);
+}
+
+@media (max-width: 920px) {
+    .login-container {
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .image-side {
+        display: none;
+    }
+
+    .form-box {
+        position: static;
+        width: 100%;
+        padding: 40px 25px;
+    }
+}
